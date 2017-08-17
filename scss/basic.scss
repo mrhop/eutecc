@@ -1,0 +1,307 @@
+@import "compass/css3";
+
+$icon-font-path: "../assets/fonts/bootstrap/" !default;
+$brand-primary: #1a2e46 !default;
+$navbar-default-color: #1a2e46 !default;
+$navbar-default-level2-color: #0bc6f9 !default;
+$navbar-default-link-color: #1a2e46 !default;
+$navbar-default-link-active-color: #0bc6f9 !default;
+$navbar-default-link-hover-color: #0bc6f9 !default;
+$navbar-default-link-active-bg: #fff !default;
+$navbar-default-link-hover-bg: #fff !default;
+$index-first-container-height: 600px !default;
+$navbar-collapse-max-height: 600px !default;
+
+// Navbar brand label
+$navbar-default-brand-color: #1a2e46 !default;
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-y: hidden;
+}
+
+a {
+
+  &:hover {
+    text-decoration: underline;
+  }
+  &.learn-more {
+    color: #666;
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+}
+
+.container, .container-fluid {
+  text-align: center;
+  padding-bottom: 0px;
+  div.title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: left;
+    color: white;
+    background: $brand-primary;
+    overflow: hidden;
+    span {
+      float: left;
+      margin: 0 auto;
+      &.triangle-bottomright {
+        border-left-width: 40px;
+        border-bottom-width: 30px;
+      }
+      &.h3 {
+        height: 30px;
+        line-height: 30px;
+        padding: 0 15px;
+        text-transform: uppercase;
+        font-weight: normal;
+      }
+    }
+  }
+
+}
+
+.container {
+  padding: 0;
+}
+
+.container-inner {
+  margin: 0 40px;
+}
+
+span.triangle-bottomright {
+  width: 0;
+  height: 0;
+  border-bottom: 25px solid $navbar-default-level2-color;
+  border-left: 25px solid #fff;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+div.top-container {
+  div.top-logo {
+    background: #fff;
+    height: 150px;
+    padding-top: 30px;
+    text-align: left;
+    img {
+      height: auto;
+    }
+    span.triangle-bottomright {
+      float: right;
+      margin-top: 5px;
+    }
+    a.btn {
+      float: right;
+      margin-top: 5px;
+      background: #8693a3;
+      border-radius: 0;
+      margin-right: 3px;
+      padding: 2px 8px;
+      color: #fff;
+      span {
+        margin-right: 3px;
+      }
+      &.newsletter {
+        background: $brand-primary;
+        margin-right: 20px;
+      }
+    }
+  }
+  hr.hr {
+    height: 0;
+    border-bottom: 10px solid $brand-primary;
+    margin: 0;
+  }
+  .navbar.navbar-default {
+    box-shadow: 0 3px 10px -2px #666;
+    margin-bottom: 30px;
+    height: 40px;
+    min-height: 40px;
+    border: none;
+    border-radius: 0;
+    color: $brand-primary;
+    .navbar-left {
+      .navbar-nav > li > a {
+        font-size: 16px;
+        padding: 0px 30px;
+        margin: 10px 0;
+        border-right: solid 1px $brand-primary;
+      }
+      .navbar-nav .dropdown-menu {
+        background: rgba(30, 45, 85, .6);
+        > li {
+          > a {
+            &:hover, &.active {
+              color: $brand-primary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+h3, .h3 {
+  font-weight: bold;
+  text-align: left;
+}
+
+.footer {
+  text-align: center;
+  height: 110px;
+  padding: 25px;
+  background: $brand-primary;
+  p {
+    color: #fff;
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 0;
+  }
+}
+
+#index {
+  .first-container {
+    .flexslider {
+      border: 0;
+      box-shadow: 0 3px 10px -2px #666;
+      margin-bottom: 0;
+      border-right: 0;
+      overflow: hidden;
+      background: #dae3ec;
+      img.col {
+        width: 58.33333%;
+        padding: 0;
+      }
+      .flex-caption {
+        text-align: left;
+        padding: 0 15px;
+        h3 {
+          margin-top: 10px;
+        }
+        ul {
+          padding-left: 30px;
+          font-weight: bold;
+          font-size: 12px;
+          list-style-type: disc;
+          li {
+            margin: 3px 0;
+          }
+        }
+      }
+      .flex-direction-nav a {
+        height: 50px;
+        margin-top: -25px;
+      }
+    }
+  }
+  .second-container {
+    .content {
+      color: $brand-primary;
+      text-align: left;
+      box-shadow: 0 3px 10px -2px #666;
+      margin-bottom: 20px;
+      .col {
+        padding: 0;
+        img {
+          width: 100%;
+        }
+        &.right-content {
+          p {
+            padding: 0 10px;
+            color: #787878;
+            &.h4 {
+              color: #fff;
+              background: #8494a3;
+              font-weight: normal;
+              line-height: 40px;
+              margin-top: 0;
+            }
+          }
+          button.btn {
+            float: right;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            background: #99cdff;
+            border: 0;
+            color: #fff;
+            font-style: italic;
+            font-size: 10px;
+          }
+        }
+      }
+
+    }
+  }
+  .third-container{
+    text-align: left;
+    overflow: hidden;
+    margin-bottom: 20px;
+    .content{
+      div.col{
+        margin-bottom: 20px;
+        &.left{
+          box-shadow: 0 3px 10px -2px #666;
+          background: #dae3ec;
+          p.title{
+            margin-left: 1%;
+            font-size: 20px;
+          }
+          form{
+            input,textarea{
+              border-radius: 3px;
+              font-size: 18px;
+              padding: 0 10px;
+              border: 1px solid #bbb;
+              float: left;
+              margin-left: 1%;
+              margin-bottom: 10px;
+            }
+            input{
+              width: 48%;
+              height: 35px;
+            }
+            textarea{
+              width: 97%;
+            }
+            span.required{
+              float: left;
+              color: red;
+              margin-left: 3px;
+            }
+            button.submit{
+              float: right;
+              border:0;
+              color: #fff;
+              background: $brand-primary;
+              margin-bottom: 10px;
+              margin-right: 2%;
+            }
+          }
+        }
+        &.right{
+          .container-inner{
+            box-shadow: 0 3px 10px -2px #666;
+            text-align: center;
+            margin: 0 20px;
+            padding: 0 20px 10px;
+            img{
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+}
