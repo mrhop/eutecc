@@ -78,7 +78,7 @@ a {
 span.triangle-bottomright {
   width: 0;
   height: 0;
-  border-bottom: 25px solid $navbar-default-level2-color;
+  border-bottom: 25px solid #99cdff;
   border-left: 25px solid #fff;
 }
 
@@ -130,12 +130,40 @@ div.top-container {
     border: none;
     border-radius: 0;
     color: $brand-primary;
+    @media(min-width: $screen-sm-min) {
+      .navbar-left {
+        float: none !important;
+        .navbar-nav {
+          float: none;
+          > li {
+            width: 12%;
+            > a {
+              border-right: solid 1px $brand-primary;
+            }
+            &.group-li, &.contact-li {
+              width: 14%;
+            }
+            &:last-child {
+              > a {
+                border-right: none;
+              }
+            }
+          }
+        }
+      }
+    }
     .navbar-left {
+      .navbar-nav {
+        > li {
+          > a {
+            font-size: 16px;
+            padding: 0px 30px;
+            margin: 10px 0;
+          }
+        }
+      }
       .navbar-nav > li > a {
-        font-size: 16px;
-        padding: 0px 30px;
-        margin: 10px 0;
-        border-right: solid 1px $brand-primary;
+
       }
       .navbar-nav .dropdown-menu {
         background: rgba(30, 45, 85, .6);
@@ -160,7 +188,7 @@ h3, .h3 {
   text-align: center;
   height: 110px;
   padding: 25px;
-  background: $brand-primary;
+  background: #1a2e46;
   p {
     color: #fff;
     font-size: 13px;
@@ -187,9 +215,13 @@ h3, .h3 {
         padding: 0 15px;
         h3 {
           margin-top: 10px;
+          color: #1a2e46;
+        }
+        p {
+          color: #8594a2;
         }
         ul {
-          padding-left: 30px;
+          padding-left: 15px;
           font-weight: bold;
           font-size: 12px;
           list-style-type: disc;
@@ -210,20 +242,22 @@ h3, .h3 {
       text-align: left;
       box-shadow: 0 3px 10px -2px #666;
       margin-bottom: 20px;
+      position: relative;
       .col {
         padding: 0;
         img {
           width: 100%;
         }
         &.right-content {
+          position: static;
           p {
-            padding: 0 10px;
+            padding: 0 10px 0 15px;
             color: #787878;
             &.h4 {
               color: #fff;
               background: #8494a3;
               font-weight: normal;
-              line-height: 40px;
+              line-height: 36px;
               margin-top: 0;
             }
           }
@@ -235,29 +269,32 @@ h3, .h3 {
             border: 0;
             color: #fff;
             font-style: italic;
-            font-size: 10px;
+            font-size: 14px;
+            position: absolute;
+            right: 0;
+            bottom: -5px;
           }
         }
       }
 
     }
   }
-  .third-container{
+  .third-container {
     text-align: left;
     overflow: hidden;
     margin-bottom: 20px;
-    .content{
-      div.col{
+    .content {
+      div.col {
         margin-bottom: 20px;
-        &.left{
+        &.left {
           box-shadow: 0 3px 10px -2px #666;
           background: #dae3ec;
-          p.title{
+          p.title {
             margin-left: 1%;
             font-size: 20px;
           }
-          form{
-            input,textarea{
+          form {
+            input, textarea {
               border-radius: 3px;
               font-size: 18px;
               padding: 0 10px;
@@ -266,21 +303,21 @@ h3, .h3 {
               margin-left: 1%;
               margin-bottom: 10px;
             }
-            input{
+            input {
               width: 48%;
               height: 35px;
             }
-            textarea{
+            textarea {
               width: 97%;
             }
-            span.required{
+            span.required {
               float: left;
               color: red;
               margin-left: 3px;
             }
-            button.submit{
+            button.submit {
               float: right;
-              border:0;
+              border: 0;
               color: #fff;
               background: $brand-primary;
               margin-bottom: 10px;
@@ -288,15 +325,11 @@ h3, .h3 {
             }
           }
         }
-        &.right{
-          .container-inner{
-            box-shadow: 0 3px 10px -2px #666;
-            text-align: center;
-            margin: 0 20px;
-            padding: 0 20px 10px;
-            img{
-              width: 100%;
-            }
+        &.right {
+          padding-right: 0;
+          img {
+            box-shadow: 0 3px 10px 2px #666;
+            float: right;
           }
         }
       }
