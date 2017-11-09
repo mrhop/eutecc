@@ -407,8 +407,13 @@ h3, .h3 {
         &.right {
           padding-right: 0;
           img {
+            width: 100%;
             box-shadow: 0 3px 10px 2px #666;
             float: right;
+            @media(max-width: $screen-sm-max) {
+              float: none;
+              width: 90%;
+            }
           }
         }
       }
