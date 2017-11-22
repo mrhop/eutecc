@@ -105,10 +105,12 @@ div.top-container {
     img {
       height: auto;
       @media(max-width: $screen-xs-max) {
-        width: 100%;
+        //width: 100%;
+        width: 60%;
       }
     }
     span.triangle-bottomright {
+      display: none;
       float: right;
       margin-top: 5px;
     }
@@ -124,6 +126,7 @@ div.top-container {
         margin-right: 3px;
       }
       &.newsletter {
+        display: none;
         background: $brand-primary;
         margin-right: 20px;
       }
@@ -142,19 +145,34 @@ div.top-container {
     border: none;
     border-radius: 0;
     color: $brand-primary;
+    .navbar-left {
+      float: none !important;
+      .navbar-nav {
+        float: none;
+      }
+    }
     @media(max-width: $screen-xs-max) {
       height: auto;
-      overflow: hidden;
-      display: none;
+      min-height: 1px;
       margin-bottom: 5px;
+      overflow: hidden;
+      //display: none;
+      //margin-bottom: 5px;
       .navbar-left {
+        float: none;
         .nav.navbar-nav {
-          margin-top: 0;
-          margin-bottom: 0;
+          font-size: 0;
+          overflow-x: auto;
+          white-space: nowrap;
+          margin: 0;
           > li {
+            display: inline-block;
+            text-align: -webkit-match-parent;
+            white-space: nowrap;
             > a {
+              font-size: .875rem;
               margin: 0;
-              padding: 8px 0;
+              padding: .5rem 1rem;
             }
             &:hover, &:active, &.active {
               a {
@@ -168,22 +186,20 @@ div.top-container {
     }
     @media(min-width: $screen-sm-min) {
       .navbar-left {
-        float: none !important;
         .navbar-nav {
-          float: none;
           > li {
             width: 14%;
             @media(max-width: 1024px) {
               width: 14%;
-            }
-            > a {
-              border-right: solid 1px $brand-primary;
             }
             &.group-li, &.contact-li {
               width: 14%;
               @media(max-width: 1024px) {
                 width: 15%;
               }
+            }
+            > a {
+              border-right: solid 1px $brand-primary;
             }
             &:last-child {
               > a {
@@ -866,6 +882,9 @@ h3, .h3 {
         padding: 50px;
         width: 60%;
         line-height: 1.5;
+        @media(max-width: $screen-xs-max) {
+          margin-top: 0;
+        }
       }
     }
     div.bottom {

@@ -33,15 +33,15 @@ $(document).ready(function () {
     $(".navbar-nav li." + $("body").attr("id") + "-li-parent").addClass("active");
     $(".left-menu li." + $("body").attr("id")).addClass("active");
 
-    $(".top-logo .top-logo-img").click(function () {
-        if ($(window).width() <= 768) {
-            if ($(".navbar.navbar-default").is(":hidden")) {
-                $(".navbar.navbar-default").slideDown()
-            } else {
-                $(".navbar.navbar-default").slideUp()
-            }
-        }
-    })
+    // $(".top-logo .top-logo-img").click(function () {
+    //     if ($(window).width() <= 768) {
+    //         if ($(".navbar.navbar-default").is(":hidden")) {
+    //             $(".navbar.navbar-default").slideDown()
+    //         } else {
+    //             $(".navbar.navbar-default").slideUp()
+    //         }
+    //     }
+    // })
     if ($("body").attr("id") === 'index') {
         $('.first-container .flexslider').flexslider({
             fadeFirstSlide: false,
